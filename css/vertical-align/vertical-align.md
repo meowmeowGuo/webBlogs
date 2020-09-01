@@ -130,7 +130,7 @@ vertical-align 仅对行内元素(inline-block、inline)生效，块元素无效
 
 子元素 baseline 与父元素 baseline 对齐的前提下，正数（eg：2px）代表相对于baseline 位置上移指定的像素，负数（-2px）代表相对于 baseline位置 下移指定的像素
 
-## 总结
+## 5. 总结
 
 vertical-align 只对行内元素生效，
 
@@ -150,6 +150,6 @@ vertical-align 只对行内元素生效，
 | text-bottom | 子元素盒模型的底部与父元素 descender 线（灰线）对齐                    |
 | 数字        | 以 baseline 为中心线上下移动指定像素量，正数为向上移动，负数为向下移动 |
 
-## 思考
+## 6. 思考
 
 如果子元素的内容有换行，如何确定baseline？
