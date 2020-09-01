@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      :root {
+        --top1: 33px;
+        --top2: 104px;
+        --top3: 118px;
+      }
+
+      body {
+        font-family: -webkit-pictograph;
+      }
+
+      div {
+        border: 1px solid black;
+        position: relative;
+        box-sizing: border-box;
+        white-space: nowrap;
+      }
+
+      .divLine {
+        width: 100%;
+        position: absolute;
+        height: 1px;
+        border: none;
+        background-color: gray;
+        z-index: -1;
+      }
+
+      .spanLine {
+        width: 100%;
+        position: absolute;
+        height: 1px;
+        border: none;
+        background-color: red;
+      }
+
+      .divLine1 {
+        /* top: 67px; */
+        top: var(--top1);
+        background-color: blue;
+      }
+
+      .divLine2 {
+        /* top: 80px; */
+        top: calc(var(--top1) + 13px);
+        background-color: green;
+      }
+
+      .divLine3 {
+        /* top: 93px; */
+        top: calc(var(--top1) + 26px);
+        background-color: orange;
+      }
+
+      .divLine4 {
+        top: calc(var(--top1) + 33px);
+        /* top: 100px; */
+        background-color: gray;
+      }
+
+      .middle-line {
+        /* top: 87px; */
+        top: calc(var(--top1) + 19.5px);
+        background-color: red;
+      }
+
+      span {
+        background-color: rgba(0, 0, 0, 0.3);
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        line-height: 60px;
+      }
+
+      .span-middle {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100px;
+        height: 1px;
+        background-color: #fff !important;
+      }
+
+      .box2 .divLine1 {
+        /* top: 34px; */
+        top: var(--top2);
+      }
+      .box2 .divLine2 {
+        /* top: 47px; */
+        top: calc(var(--top2) + 13px);
+      }
+      .box2 .divLine3 {
+        /* top: 60px; */
+        top: calc(var(--top2) + 26px);
+      }
+      .box2 .divLine4 {
+        /* top: 67px; */
+        top: calc(var(--top2) + 33px);
+      }
+      .box2 .middle-line {
+        /* top: 54px; */
+        top: calc(var(--top2) + 19.5px);
+      }
+
+      .align-img {
+        width: 120px;
+        margin: 0 10px;
+      }
+
+      .box3 .mutiple-lines {
+        width: 50px;
+        line-height: 1;
+        word-break: break-all;
+      }
+      .box3 .divLine1 {
+        /* top: 34px; */
+        top: var(--top3);
+      }
+      .box3 .divLine2 {
+        /* top: 47px; */
+        top: calc(var(--top3) + 13px);
+      }
+      .box3 .divLine3 {
+        /* top: 60px; */
+        top: calc(var(--top3) + 26px);
+      }
+      .box3 .divLine4 {
+        /* top: 67px; */
+        top: calc(var(--top3) + 33px);
+      }
+      .box3 .middle-line {
+        /* top: 54px; */
+        top: calc(var(--top3) + 19.5px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="./lines.png" />
+    <!-- 文字 -->
+    <div style="font-size: 30px; line-height: 100px; margin-top: 20px">
+      Xxjpf
+      <div class="divLine divLine1"></div>
+      <div class="divLine divLine2"></div>
+      <div class="divLine divLine3"></div>
+      <div class="divLine divLine4"></div>
+      <div class="divLine middle-line"></div>
+      <span style="vertical-align: baseline">Xx-baseline</span>
+      <span style="vertical-align: sub">Xx-sub</span>
+      <span style="vertical-align: super">Xx-super</span>
+      <span style="vertical-align: top">Xx-top</span>
+      <span style="position: relative; vertical-align: middle">
+        <span class="span-middle"></span>Xx-middle
+      </span>
+      <span style="vertical-align: bottom">Xx-bottom</span>
+      <span style="vertical-align: text-top">Xx-text-top</span>
+      <span style="vertical-align: text-bottom">Xx-text-bottom</span>
+    </div>
+    <!-- 图片 -->
+    <div
+      class="box2"
+      style="font-size: 30px; line-height: 100px; margin-top: 20px"
+    >
+      Xxjpf
+      <div class="divLine divLine1"></div>
+      <div class="divLine divLine2"></div>
+      <div class="divLine divLine3"></div>
+      <div class="divLine divLine4"></div>
+      <div class="divLine middle-line"></div>
+      <img
+        class="align-img"
+        style="vertical-align: baseline"
+        src="./align-img.png"
+      />
+      <img
+        class="align-img"
+        style="vertical-align: sub"
+        src="./align-img.png"
+      />
+      <img
+        class="align-img"
+        style="vertical-align: super"
+        src="./align-img.png"
+      />
+      <img
+        class="align-img"
+        style="vertical-align: top"
+        src="./align-img.png"
+      />
+      <img
+        class="align-img"
+        style="vertical-align: middle"
+        src="./align-img.png"
+      />
+      <img
+        class="align-img"
+        style="vertical-align: bottom"
+        src="./align-img.png"
+      />
+      <img
+        class="align-img"
+        style="vertical-align: text-top; width: 100px"
+        src="./align-img.png"
+      />
+      <img
+        class="align-img"
+        style="vertical-align: text-bottom"
+        src="./align-img.png"
+      />
+    </div>
+    <!-- 多行文字 -->
+    <!-- <div
+      class="box3"
+      style="font-size: 30px; line-height: 100px; margin-top: 20px"
+    >
+      Xxjpf
+      <div class="divLine divLine1"></div>
+      <div class="divLine divLine2"></div>
+      <div class="divLine divLine3"></div>
+      <div class="divLine divLine4"></div>
+      <div class="divLine middle-line"></div>
+      <span class="mutiple-lines" style="vertical-align: baseline"
+        >Xx-baseline-xX</span
+      >
+      <span class="mutiple-lines" style="vertical-align: sub">Xx-sub-xx</span>
+      <span class="mutiple-lines" style="vertical-align: super"
+        >Xx-super-xx</span
+      >
+      <span class="mutiple-lines" style="vertical-align: top">Xx-top-xX</span>
+      <span
+        class="mutiple-lines"
+        style="position: relative; vertical-align: middle"
+      >
+        <span class="span-middle"></span>Xx-middle-xX
+      </span>
+      <span
+        class="mutiple-lines"
+        style="vertical-align: bottom; padding-top: 30px"
+        >Xx-bottom-xX</span
+      >
+      <span class="mutiple-lines" style="vertical-align: text-top"
+        >Xx-text-top-xX</span
+      >
+      <span class="mutiple-lines" style="vertical-align: text-bottom"
+        >Xx-text-bottom-xX</span
+      >
+    </div> -->
+  </body>
+</html>
